@@ -1,0 +1,19 @@
+{
+  "name": "conditional-demo",
+  "version": "1.0.0",
+  "description": "Demo for Conditionals in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forrest-wilson/conditional-demo.git"
+  },
+  "author": "Forrest Wilson-Jennings",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forrest-wilson/conditional-demo/issues"
+  },
+  "homepage": "https://github.com/forrest-wilson/conditional-demo#readme"
+}
