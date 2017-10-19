@@ -18,26 +18,49 @@
     <p id="output"></p>
     
     <script>
+        // Declares the checkName function
         function checkName(fName, lName) {
+            // Assign the HTML object to the output variable
             var output = document.getElementById("output");
 
+            // If the fName and lName perameters are set, execute the code in the if block
             if (fName && lName) {
+
+                // Sets the local output variable to the concatenated string
                 this.output = "Hello " + fName + " " + lName + ".";
+
+            // If the fName perameter is true and the lName perameter is not true, execute this block
             } else if (fName && !lName) {
+
+                // Sets the local output variable to the concatenated string
                 this.output = "Hello " + fName + ". You haven't entered your last name.";
+
+            // If the fName perameter is not true and the lName perameter is true, execute this block
             } else if (!fName && lName) {
+
+                // Sets the local output variable to the concatenated string
                 this.output = "You haven't entered your first name Mr/Mrs " + lName + ".";
+
+            // If neither fName or lName is true, execute this block
             } else {
+
+                // Sets the local output variable to the concatenated string
                 this.output = "You haven't entered anything! How am I supposed to know who you are!!!";
             }
 
+            // Returns the local output variable
             return this.output;
         }
 
+        // Gets the HTML object with the submitButton ID and executes an anonymous function when clicked
         document.getElementById("submitButton").onclick = () => {
+
+            // Creates the firstName and lastName variables and assign the values retrieved from the DOM
             var firstName = document.getElementById("firstName").value,
                 lastName = document.getElementById("lastName").value;
 
+            // Gives the checkName function the local variables as arguments and assigns the return value
+            // to the output HTML element
             document.getElementById("output").innerHTML = checkName(firstName, lastName);
         }
     </script>
