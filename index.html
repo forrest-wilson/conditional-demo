@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Conditional Demo</title>
+</head>
+<body>
+    <label for="firstName">Please enter your first name:</label>
+    <input id="firstName">
+    <label for="lastName">Please enter your last name:</label>
+    <input id="lastName">
+
+    <button id="submitButton">Submit</button>
+
+    <p id="output"></p>
+    
+    <script>
+        function checkName(fName, lName) {
+            var output = document.getElementById("output");
+
+            if (fName && lName) {
+                this.output = "Hello " + fName + " " + lName + ".";
+            } else if (fName && !lName) {
+                this.output = "Hello " + fName + ". You haven't entered your last name.";
+            } else if (!fName && lName) {
+                this.output = "You haven't entered your first name Mr/Mrs " + lName + ".";
+            } else {
+                this.output = "You haven't entered anything! How am I supposed to know who you are!!!";
+            }
+
+            return this.output;
+        }
+
+        document.getElementById("submitButton").onclick = () => {
+            var firstName = document.getElementById("firstName").value,
+                lastName = document.getElementById("lastName").value;
+
+            document.getElementById("output").innerHTML = checkName(firstName, lastName);
+        }
+    </script>
+</body>
+</html>
